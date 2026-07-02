@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Մեր Հարսանիքը</title>
+    <meta name="description" content="Դավիթ և Էլեն — Հարսանեկան հրավեր, Հուլիսի 7, 2027">
+<meta property="og:title" content="Մեր Հարսանիքը 💍">
+<meta property="og:description" content="Հուլիսի 7, 2027 — Հովհանավանք & WineCorner Ashtarak">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+Armenian:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Our stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- SCREEN 1: ENVELOPE -->
+    <!-- ============================================ -->
+    <section id="envelope-screen">
+        <div id="particles"></div>
+
+        <div id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body"></div>
+            <div class="wax-seal">ㅤ♡ㅤ</div>
+        </div>
+
+        <p id="envelope-hint">Սեղմեք՝ բացելու համար</p>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SCREEN 2: MAIN INVITATION (hidden until envelope opens) -->
+    <!-- ============================================ -->
+    <main id="invitation" hidden>
+
+        <!-- Couple photo + heartfelt text -->
+        <section id="hero" class="fade-in-section">
+            <img id="couple-photo" src="images/couple.jpg" alt="Հարսանյաց զույգի լուսանկար" loading="lazy">
+            <h1>Մեր Հարսանիքը</h1>
+            <h2>Դավիթ ㅤ♡ㅤ  Էլեն</h2>
+            <h2>07.07.2027</h2>
+            <p id="hero-text">
+                Մեծ ուրախությամբ հրավիրում ենք Ձեզ կիսելու մեզ հետ մեր կյանքի ամենագեղեցիկ օրը։
+            </p>
+        </section>
+
+        <!-- Countdown -->
+        <section id="countdown-section" class="fade-in-section">
+            <h2>Մինչև մեր հարսանիքը մնացել է</h2>
+           <div id="countdown">
+    <div class="countdown-item">
+        <div class="flip-card"><span id="days">00</span></div>
+        <small>Օր</small>
+    </div>
+    <div class="countdown-item">
+        <div class="flip-card"><span id="hours">00</span></div>
+        <small>Ժամ</small>
+    </div>
+    <div class="countdown-item">
+        <div class="flip-card"><span id="minutes">00</span></div>
+        <small>Րոպե</small>
+    </div>
+    <div class="countdown-item">
+        <div class="flip-card"><span id="seconds">00</span></div>
+        <small>Վայրկյան</small>
+    </div>
+</div>
+        </section>
+
+        <!-- Calendar -->
+        <section id="calendar-section" class="fade-in-section">
+            <h2>Հուլիսի 7, 2027</h2>
+            <div id="calendar"></div>
+        </section>
+
+        <!-- Wedding info cards -->
+        <section id="info-section" class="fade-in-section">
+
+    <div class="info-card">
+        <div class="card-icon church-icon">⛪</div>
+        <h3>Պսակադրություն</h3>
+        <p>Հովհանավանք</p>
+        <p>15:30</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Hovhanavank"
+           target="_blank" class="map-btn">Բացել քարտեզը</a>
+    </div>
+
+    <div class="info-card">
+        <div class="card-icon cheers-icon">🥂</div>
+        <h3>Հանդիսություն</h3>
+        <p>WineCorner Ashtarak</p>
+        <p>18:00</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=WineCorner+Ashtarak"
+           target="_blank" class="map-btn">Բացել քարտեզը</a>
+    </div>
+
+</section>
+
+        <!-- Timeline -->
+        <section id="timeline-section" class="fade-in-section">
+            <h2>Օրվա Ընթացքը</h2>
+            <ul id="timeline">
+    <li class="timeline-item">
+        <div class="timeline-item-inner">
+            <span class="timeline-time">15:30</span>
+            <span class="timeline-label">Պսակադրություն</span>
+        </div>
+    </li>
+    <li class="timeline-item">
+        <div class="timeline-item-inner">
+            <span class="timeline-time">17:30</span>
+            <span class="timeline-label">Ընդունելություն</span>
+        </div>
+    </li>
+    <li class="timeline-item">
+        <div class="timeline-item-inner">
+            <span class="timeline-time">18:00</span>
+            <span class="timeline-label">Հանդիսություն</span>
+        </div>
+    </li>
+</ul>
+        </section>
+
+      <!-- Gallery -->
+<section id="gallery-section" class="fade-in-section">
+
+    <div id="gallery">
+        <div class="gallery-track">
+            <img class="gallery-img" src="images/gallery1.jpg" alt="Հուշեր 1" loading="lazy">
+            <img class="gallery-img" src="images/gallery2.jpg" alt="Հուշեր 2" loading="lazy">
+            <img class="gallery-img" src="images/gallery3.jpg" alt="Հուշեր 3" loading="lazy">
+        </div>
+        <button id="gallery-prev" class="gallery-arrow" aria-label="Նախորդը">‹</button>
+        <button id="gallery-next" class="gallery-arrow" aria-label="Հաջորդը">›</button>
+        <div id="gallery-dots"></div>
+    </div>
+</section>
+
+        <!-- RSVP -->
+        <section id="rsvp-section" class="fade-in-section">
+    <h2>Հաստատեք Ձեր Մասնակցությունը</h2>
+
+    <form id="rsvp-form">
+        <label for="guest-name">Անուն, Ազգանուն</label>
+        <input type="text" id="guest-name" name="guest-name" required>
+
+        
+
+        <fieldset id="attendance-group">
+            <legend>Կմասնակցե՞ք մեր հարսանիքին</legend>
+
+            <label class="radio-option">
+                <input type="radio" name="attendance" value="yes" required>
+                ✅ Այո, սիրով կմասնակցեմ
+            </label>
+
+            <label class="radio-option">
+                <input type="radio" name="attendance" value="no" required>
+                ❌ Ցավոք, չեմ կարող մասնակցել
+            </label>
+        </fieldset>
+<fieldset id="side-group">
+            <legend>Հրավիրված եք</legend>
+
+            <label class="radio-option">
+                <input type="radio" name="side" value="bride" required>
+                👰 Հարսի կողմից
+            </label>
+
+            <label class="radio-option">
+                <input type="radio" name="side" value="groom" required>
+                🤵 Փեսայի կողմից
+            </label>
+        </fieldset>
+        <div id="guest-count-wrapper">
+            <label for="guest-count">Մասնակիցների քանակ</label>
+            <select id="guest-count" name="guest-count">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+
+        <button type="submit" id="rsvp-submit">Ուղարկել պատասխան</button>
+    </form>
+
+    <p id="rsvp-message" hidden></p>
+</section>
+<footer id="site-footer">
+    <p>Դավիթ & Էլեն</p>
+    <p>07 · 07 · 2027</p>
+</footer>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/envelope.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/rsvp.js"></script>
+    <script src="js/scroll-animations.js"></script>
+
+</body>
+</html>

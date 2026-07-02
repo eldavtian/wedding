@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ադմինի Վահանակ — Հարսանիք</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+Armenian:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- LOGIN SCREEN -->
+    <!-- ============================================ -->
+    <div id="login-screen">
+        <div id="login-box">
+            <h1>Ադմինի Մուտք</h1>
+            <p>Մեր Հարսանիք — RSVP Տվյալներ</p>
+
+            <label for="admin-password">Գաղտնաբառ</label>
+            <input
+                type="password"
+                id="admin-password"
+                placeholder="Մուտքագրեք գաղտնաբառը"
+                autocomplete="current-password"
+            >
+            <button id="login-btn">Մուտք</button>
+            <p id="login-error" hidden>Սխալ գաղտնաբառ։ Կրկին փորձեք։</p>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- DASHBOARD (hidden until logged in) -->
+    <!-- ============================================ -->
+    <div id="dashboard" hidden>
+
+        <header id="dashboard-header">
+            <h1>RSVP Պատասխաններ</h1>
+            <button id="logout-btn">Ելք</button>
+        </header>
+
+        <!-- Summary cards -->
+        <div id="summary-cards">
+            <div class="summary-card">
+                <span id="stat-total">0</span>
+                <small>Ընդամենը</small>
+            </div>
+            <div class="summary-card attending">
+                <span id="stat-attending">0</span>
+                <small>Կմասնակցի</small>
+            </div>
+            <div class="summary-card not-attending">
+                <span id="stat-not-attending">0</span>
+                <small>Չի մասնակցի</small>
+            </div>
+            <div class="summary-card guests">
+                <span id="stat-guests">0</span>
+                <small>Ընդ. հյուրեր</small>
+            </div>
+        </div>
+
+        <!-- Controls: search + filters -->
+        <div id="controls">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Փնտրել անունով..."
+            >
+
+            <div id="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Բոլորը</button>
+                <button class="filter-btn" data-filter="attending">Կմասնակցի</button>
+                <button class="filter-btn" data-filter="not-attending">Չի մասնակցի</button>
+                <button class="filter-btn" data-filter="bride">👰 Հարսի կողմից</button>
+                <button class="filter-btn" data-filter="groom">🤵 Փեսայի կողմից</button>
+            </div>
+
+            <div id="sort-controls">
+                <label for="sort-select">Դասավորել՝</label>
+                <select id="sort-select">
+                    <option value="newest">Նորից → Հին</option>
+                    <option value="oldest">Հինից → Նոր</option>
+                    <option value="name-az">Անուն (Ա–Я)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div id="table-wrapper">
+            <table id="rsvp-table">
+                <thead>
+                    <tr>
+                        <th>Անուն</th>
+                        <th>Կողմը</th>
+                        <th>Կմասնակցի</th>
+                        <th>Հյուրեր</th>
+                        <th>Ամսաթիվ</th>
+                        <th>Ժամ</th>
+                    </tr>
+                </thead>
+                <tbody id="rsvp-tbody"></tbody>
+            </table>
+            <p id="empty-message" hidden>Ոչ մի արդյունք չի գտնվել։</p>
+        </div>
+
+        <p id="loading-message">Տվյալները բեռնվում են...</p>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
