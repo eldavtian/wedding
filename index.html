@@ -22,16 +22,24 @@
     <!-- SCREEN 1: ENVELOPE -->
     <!-- ============================================ -->
     <section id="envelope-screen">
-        <div id="particles"></div>
+    <div id="particles"></div>
+    <div id="botanical-bg"></div>
 
-        <div id="envelope">
-            <div class="envelope-flap"></div>
-            <div class="envelope-body"></div>
-            <div class="wax-seal">ㅤ♡ㅤ</div>
+    <!-- <div id="envelope-intro">
+        <p class="env-pre">ՄԵՐ ՀԱՐՍԱՆԻՔԸ</p>
+        <h1 class="env-couple">Դավիթ & Էլեն</h1>
+    </div> -->
+
+    <div id="envelope">
+        <div class="envelope-flap">
         </div>
+        <div class="envelope-body"></div>
+        <div class="envelope-lace-border"></div>
+        <div class="wax-seal"></div>
+    </div>
 
-        <p id="envelope-hint">Սեղմեք՝ բացելու համար</p>
-    </section>
+    <p id="envelope-hint">Սեղմեք՝ բացելու համար</p>
+</section>
 
     <!-- ============================================ -->
     <!-- SCREEN 2: MAIN INVITATION (hidden until envelope opens) -->
@@ -40,8 +48,12 @@
 
         <!-- Couple photo + heartfelt text -->
         <section id="hero" class="fade-in-section">
-            <img id="couple-photo" src="images/couple.jpg" alt="Հարսանյաց զույգի լուսանկար" loading="lazy">
-            <h1>Մեր Հարսանիքը</h1>
+            <div class="photo-frame-wrapper">
+    <img id="couple-photo" src="images/couple.jpg" alt="Հարսանյաց զույգի լուսանկար" loading="lazy">
+    <div class="frame-ornament frame-ornament-top"></div>
+    <div class="frame-ornament frame-ornament-bottom"></div>
+</div>
+<h1>Մենք ամուսնանում ենք</h1>
             <h2>Դավիթ ㅤ♡ㅤ  Էլեն</h2>
             <h2>07.07.2027</h2>
             <p id="hero-text">
@@ -50,27 +62,7 @@
         </section>
 
         <!-- Countdown -->
-        <section id="countdown-section" class="fade-in-section">
-            <h2>Մինչև մեր հարսանիքը մնացել է</h2>
-           <div id="countdown">
-    <div class="countdown-item">
-        <div class="flip-card"><span id="days">00</span></div>
-        <small>Օր</small>
-    </div>
-    <div class="countdown-item">
-        <div class="flip-card"><span id="hours">00</span></div>
-        <small>Ժամ</small>
-    </div>
-    <div class="countdown-item">
-        <div class="flip-card"><span id="minutes">00</span></div>
-        <small>Րոպե</small>
-    </div>
-    <div class="countdown-item">
-        <div class="flip-card"><span id="seconds">00</span></div>
-        <small>Վայրկյան</small>
-    </div>
-</div>
-        </section>
+       
 
         <!-- Calendar -->
         <section id="calendar-section" class="fade-in-section">
@@ -82,7 +74,9 @@
         <section id="info-section" class="fade-in-section">
 
     <div class="info-card">
-        <div class="card-icon church-icon">⛪</div>
+        <div class="card-icon church-icon">
+            <img src="./images/church.svg" alt="">
+        </div>
         <h3>Պսակադրություն</h3>
         <p>Հովհանավանք</p>
         <p>15:30</p>
@@ -91,7 +85,9 @@
     </div>
 
     <div class="info-card">
-        <div class="card-icon cheers-icon">🥂</div>
+        <div class="card-icon cheers-icon">
+            <img src="./images/cheers.svg" alt="">
+        </div>
         <h3>Հանդիսություն</h3>
         <p>WineCorner Ashtarak</p>
         <p>18:00</p>
@@ -102,9 +98,15 @@
 </section>
 
         <!-- Timeline -->
-        <section id="timeline-section" class="fade-in-section">
-            <h2>Օրվա Ընթացքը</h2>
-            <ul id="timeline">
+<section id="timeline-section" class="fade-in-section">
+    <h2>Օրվա Ընթացքը</h2>
+    <ul id="timeline">
+    <li class="timeline-item">
+         <div class="timeline-item-inner">
+            <span class="timeline-time">12:00</span>
+            <span class="timeline-label">Հարսի տուն</span>
+        </div>
+    </li>
     <li class="timeline-item">
         <div class="timeline-item-inner">
             <span class="timeline-time">15:30</span>
@@ -128,17 +130,23 @@
 
       <!-- Gallery -->
 <section id="gallery-section" class="fade-in-section">
-
+ <div class="gallery-wrapper">
     <div id="gallery">
         <div class="gallery-track">
             <img class="gallery-img" src="images/gallery1.jpg" alt="Հուշեր 1" loading="lazy">
             <img class="gallery-img" src="images/gallery2.jpg" alt="Հուշեր 2" loading="lazy">
             <img class="gallery-img" src="images/gallery3.jpg" alt="Հուշեր 3" loading="lazy">
+            <img class="gallery-img" src="images/gallery4.jpg" alt="Հուշեր 4" loading="lazy">
+            <img class="gallery-img" src="images/gallery5.jpg" alt="Հուշեր 5" loading="lazy">
+            <img class="gallery-img" src="images/gallery6.jpg" alt="Հուշեր 6" loading="lazy">
+            <img class="gallery-img" src="images/gallery7.jpg" alt="Հուշեր 7" loading="lazy">
+           
         </div>
         <button id="gallery-prev" class="gallery-arrow" aria-label="Նախորդը">‹</button>
         <button id="gallery-next" class="gallery-arrow" aria-label="Հաջորդը">›</button>
         <div id="gallery-dots"></div>
     </div>
+ </div>
 </section>
 
         <!-- RSVP -->
@@ -156,12 +164,12 @@
 
             <label class="radio-option">
                 <input type="radio" name="attendance" value="yes" required>
-                ✅ Այո, սիրով կմասնակցեմ
+                ✓ Այո, սիրով կմասնակցեմ
             </label>
 
             <label class="radio-option">
                 <input type="radio" name="attendance" value="no" required>
-                ❌ Ցավոք, չեմ կարող մասնակցել
+                ✗ Ցավոք, չեմ կարող մասնակցել
             </label>
         </fieldset>
 <fieldset id="side-group">
@@ -169,12 +177,12 @@
 
             <label class="radio-option">
                 <input type="radio" name="side" value="bride" required>
-                👰 Հարսի կողմից
+                 Հարսի կողմից
             </label>
 
             <label class="radio-option">
                 <input type="radio" name="side" value="groom" required>
-                🤵 Փեսայի կողմից
+                 Փեսայի կողմից
             </label>
         </fieldset>
         <div id="guest-count-wrapper">
@@ -192,11 +200,47 @@
 
     <p id="rsvp-message" hidden></p>
 </section>
+ <section id="countdown-section" class="fade-in-section">
+            <h2>Մինչև մեր հարսանիքը մնացել է</h2>
+           <div id="countdown">
+    <div class="countdown-item">
+        <div class="flip-card"><span id="days">00</span></div>
+        <small>Օր</small>
+    </div>
+    <div class="countdown-item">
+        <div class="flip-card"><span id="hours">00</span></div>
+        <small>Ժամ</small>
+    </div>
+    <div class="countdown-item">
+        <div class="flip-card"><span id="minutes">00</span></div>
+        <small>Րոպե</small>
+    </div>
+    <div class="countdown-item">
+        <div class="flip-card"><span id="seconds">00</span></div>
+        <small>Վայրկյան</small>
+    </div>
+</div>
+        </section>
 <footer id="site-footer">
     <p>Դավիթ & Էլեն</p>
     <p>07 · 07 · 2027</p>
 </footer>
+<div id="vinyl-player" hidden>
+    <button id="vinyl-btn" aria-label="Նվագել / Դադար">
+        <div id="vinyl-disc">
+            <div class="vinyl-label">
+                <span class="vinyl-note">
+                    ♪
+                </span>
+            </div>
+        </div>
+    </button>
+    <audio id="bg-audio" loop>
+        <source src="audio/song.mp3" type="audio/mpeg">
+    </audio>
+</div>
     </main>
+<!-- Vinyl audio player - fixed bottom right -->
 
     <!-- Scripts -->
     <script src="js/envelope.js"></script>
@@ -205,6 +249,8 @@
     <script src="js/gallery.js"></script>
     <script src="js/rsvp.js"></script>
     <script src="js/scroll-animations.js"></script>
+    <script src="js/vinyl.js"></script>
+
 
 </body>
 </html>

@@ -78,6 +78,8 @@ function setupEnvelopeClick() {
 
             // Smoothly scroll to the very top in case anything shifted
             window.scrollTo({ top: 0, behavior: 'instant' });
+            document.getElementById('vinyl-player').hidden = false;
+    startVinylAudio();
         }, 900 + 1200); // 900ms wait + 1200ms fade-out duration
     });
 }
