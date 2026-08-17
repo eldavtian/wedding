@@ -1291,3 +1291,11 @@ legend {
     /* Add a border top to simulate the edge of the back paper */
     border-top: 1px solid rgba(150, 130, 100, 0.5); 
 }
+.gallery-img {
+    width: 340px;
+    height: 260px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 16px;        /* rounded corners */
+    margin-right: 20px;         /* gap between photos */
+}
